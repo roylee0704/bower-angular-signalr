@@ -1,7 +1,7 @@
 # packaged angular-socket-signalr
 
 This repo is for distribution on `npm` and `bower`. The source for this module is in the
-[main angular-socket-signalr repo](https://github.com/roylee0704/angular-socket-signalr).
+[main angular-signalr repo](https://github.com/roylee0704/angular-signalr).
 Please file issues and pull requests against that repo.
 
 ## Install
@@ -11,27 +11,27 @@ You can install this package either with `npm` or with `bower`.
 ### npm
 
 ```shell
-npm install angular-socket-signalr
+npm install angular-signalr
 ```
 
 Then add a `<script>` to your `index.html`:
 
 ```html
-<script src="/node_modules/roylee0704/angular-socket-signalr.js"></script>
+<script src="/node_modules/roylee0704/angular-signalr.js"></script>
 ```
 
-Or `require('angular-socket-signalr')` from your code.
+Or `require('angular-signalr')` from your code.
 
 ### bower
 
 ```shell
-bower install angular-socket-signalr
+bower install angular-signalr
 ```
 
 Then add a `<script>` to your `index.html`:
 
 ```html
-<script src="/bower_components/roylee0704/angular-socket-signalr.js"></script>
+<script src="/bower_components/roylee0704/angular-signalr.js"></script>
 ```
 
 ## Documentation
