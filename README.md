@@ -1,26 +1,12 @@
 # packaged angular-signalr
 
-This repo is for distribution on `npm` and `bower`. The source for this module is in the
+This repo is for distribution on `bower`. The source for this module is in the
 [main angular-signalr repo](https://github.com/roylee0704/angular-signalr).
 Please file issues and pull requests against that repo.
 
 ## Install
 
-You can install this package either with `npm` or with `bower`.
-
-### npm
-
-```shell
-npm install angular-signalr
-```
-
-Then add a `<script>` to your `index.html`:
-
-```html
-<script src="/node_modules/roylee0704/angular-signalr.js"></script>
-```
-
-Or `require('angular-signalr')` from your code.
+You can install this package with `bower`.
 
 ### bower
 
