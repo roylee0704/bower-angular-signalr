@@ -1,0 +1,20 @@
+{
+  "name": "angular-signalr",
+  "version": "0.0.1",
+  "authors": [
+    "Roy Lee <roylee0704@gmail.com>"
+  ],
+  "description": "Signalr.NET component for AngularJS.",
+  "keywords": [
+    "angular",
+    "signalr"
+  ],
+  "license": "MIT",
+  "ignore": [],
+  "main": [
+    "./angular-signalr.js"
+  ],
+  "dependencies": {
+    "angular": "~1.2.x"
+  }
+}
