@@ -1,4 +1,4 @@
-# packaged angular-socket-signalr
+# packaged angular-signalr
 
 This repo is for distribution on `npm` and `bower`. The source for this module is in the
 [main angular-signalr repo](https://github.com/roylee0704/angular-signalr).
