@@ -17,7 +17,7 @@ bower install angular-signalr
 Then add a `<script>` to your `index.html`:
 
 ```html
-<script src="/bower_components/roylee0704/angular-signalr.js"></script>
+<script src="/bower_components/angular-signalr/angular-signalr.min.js"></script>
 ```
 
 ## Documentation
