@@ -15,6 +15,7 @@ angular.module('roy.signalr-hub', []).
         }: angular.noop;
 
       };
+
       return function hubFactory (hubName, opts) {
         opts = angular.extend({
           hub: $.hubConnection(),
@@ -41,16 +42,25 @@ angular.module('roy.signalr-hub', []).
             _hub.stop();
           },
 
-          on: function(eventName, callback) {
-            _proxy.on(eventName, asyncAngularify(_proxy, callback));
+          on: function(ev, callback) {
+            _proxy.on(ev, asyncAngularify(_proxy, callback));
+          },
+
+          off: function(ev, callback) {
+            _proxy.off(ev, callback);
           },
 
           invoke: function(ev, data) {
-            _proxy.invoke.apply(_proxy, arguments);
+            var args = arguments;
+            return promisify(function() {
+              _proxy.invoke.apply(_proxy, args);
+            });
           },
 
           stateChanged: function(callback) {
-            _hub.stateChanged(asyncAngularify(_hub, callback));
+            return promisify(function() {
+              _hub.stateChanged(asyncAngularify(_hub, callback));
+            });
           },
 
           error: function(callback) {
@@ -60,6 +70,13 @@ angular.module('roy.signalr-hub', []).
 
         //auto-establish connection with server
         wrappedHub.promise = wrappedHub.connect();
+
+
+        var promisify = function (fn) {
+          return wrappedHub.promise.then(function(){
+            return fn();
+          });
+        };
 
         return wrappedHub;
       };
